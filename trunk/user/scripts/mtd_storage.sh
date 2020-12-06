@@ -305,7 +305,7 @@ EOF
 
 ### Custom user script
 ### Called after internal iptables reconfig (firewall update)
-
+ip6tables -P FORWARD ACCEPT
 #wing resume
 
 EOF
