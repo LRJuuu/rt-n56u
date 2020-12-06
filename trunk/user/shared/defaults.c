@@ -249,7 +249,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_guest_mcs_mode", "0" },
 
 #if defined (USE_WID_5G) && USE_WID_5G==7615
-	{ "wl_mumimo", "0" },
+	{ "wl_mumimo", "1" },
 #endif
 
 	// ApCli 5Ghz
@@ -266,7 +266,7 @@ struct nvram_pair router_defaults[] = {
 	/* 2G Wireless parameters */
 	{ "rt_country_code", DEF_WLAN_2G_CC },
 	{ "rt_ssid", DEF_WLAN_2G_SSID },
-	{ "rt_gmode", "5" },			/* g/n mixed */
+	{ "rt_gmode", "2" },			/* g/n mixed */
 	{ "rt_mcs_mode", "0" },
 	{ "rt_channel", "0" },
 	{ "rt_bcn", "100" },
@@ -486,8 +486,8 @@ struct nvram_pair router_defaults[] = {
 	{ "w_adbyby", "1" },
 	{ "w_pdnsd", "1" },
 	
-	{ "ip6_service", "" },
-	{ "ip6_ppe_on", "0" },
+	{ "ip6_service", "dhcp6" },
+	{ "ip6_ppe_on", "1" },
 	{ "ip6_wan_if", "0" },
 
 	{ "ip6_6in4_remote", "" },
@@ -504,12 +504,12 @@ struct nvram_pair router_defaults[] = {
 	{ "ip6_wan_size", "64" },
 	{ "ip6_wan_gate", "" },
 
-	{ "ip6_dns_auto", "0" },
+	{ "ip6_dns_auto", "1" },
 	{ "ip6_dns1", "" },
 	{ "ip6_dns2", "" },
 	{ "ip6_dns3", "" },
 
-	{ "ip6_lan_auto", "0" },
+	{ "ip6_lan_auto", "1" },
 	{ "ip6_lan_addr", "" },
 	{ "ip6_lan_size", "64" },
 	{ "ip6_lan_radv", "1" },
@@ -993,7 +993,7 @@ struct nvram_pair router_defaults[] = {
 
 #if defined(CONFIG_RALINK_MT7621) || (defined(CONFIG_RALINK_MT7620) && !defined(BOARD_N14U))
 #if defined(USE_MT7615_AP) // hwnat is disabled by default
-	{ "hw_nat_mode", "2" },
+	{ "hw_nat_mode", "1" },
 #else
 	{ "hw_nat_mode", "4" },
 #endif
